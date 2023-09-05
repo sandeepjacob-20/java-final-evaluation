@@ -21,7 +21,7 @@ public class Admin implements AdminMenu{
 		System.out.println("Enter the account type : ");
 		String accType = scan.next();
 		System.out.println("Enter the balance : ");
-		float bal = Float.parseFloat(scan.next());
+		float bal = checkAmount(scan.next());
 		System.out.println("Enter the minimum balance : ");
 		float minBal = Float.parseFloat(scan.next());
 		System.out.println("Enter the mobile number : ");
@@ -135,6 +135,31 @@ public class Admin implements AdminMenu{
 			System.out.println(e);
 		}
 		return name;
+	}
+	
+	//to verify amount entered
+	private float checkAmount(String number) {
+		try {
+			//create object for buffered reader
+			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+			//create pattern using regular expression
+			Pattern pattern = Pattern.compile("[^0-9]");
+			do {
+				//match
+				Matcher matcher = pattern.matcher(number);
+				boolean finder = matcher.find();
+				//find method returns false if string matches the pattern
+				if(finder) {
+					System.out.println("Balance must contain only digits please re-enter!");
+					number = br.readLine();
+				}else {
+					break;
+				}
+			}while(true);
+		}catch(Exception e ) {
+			System.out.println(e);
+		}
+		return Float.parseFloat(number);
 	}
 	
 	//to verify the mobile number
