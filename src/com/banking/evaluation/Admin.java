@@ -208,7 +208,11 @@ public class Admin implements AdminMenu{
 				}else if(accNo.length()>9){
 					System.out.println("Account number must not be longer than 9 digits please re-enter!");
 					accNo = br.readLine();
-				}else {
+				}else if(accNo.length()<9){
+					System.out.println("Account number must not be less than 9 digits please re-enter!");
+					accNo = br.readLine();
+				}
+				else {
 					break;
 				}
 			}while(true);
