@@ -1,3 +1,6 @@
+/*
+ * Class that implements the admin menu interface and provides the admin functionality
+ */
 package com.banking.evaluation;
 
 import java.io.BufferedReader;

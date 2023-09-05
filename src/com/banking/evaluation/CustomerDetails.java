@@ -1,3 +1,6 @@
+/*
+ * Class to store the instance variables for the user details
+ */
 package com.banking.evaluation;
 
 public class CustomerDetails {

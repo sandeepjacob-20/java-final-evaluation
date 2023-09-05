@@ -1,3 +1,6 @@
+/*
+ * Class that implements the customer menu interface and provides the customer functionalities
+ */
 package com.banking.evaluation;
 
 import java.io.BufferedReader;

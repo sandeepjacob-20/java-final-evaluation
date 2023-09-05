@@ -1,3 +1,6 @@
+/*
+ * Admin menu interface
+ */
 package com.banking.evaluation;
 
 import java.util.ArrayList;

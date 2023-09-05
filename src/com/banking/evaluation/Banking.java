@@ -1,3 +1,6 @@
+/*
+ * Main class that is executed
+ */
 package com.banking.evaluation;
 
 import java.util.ArrayList;
